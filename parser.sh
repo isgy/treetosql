@@ -86,9 +86,6 @@ EOSU
        else
                                                                              # the block will run if [ $current_indent > $p_indent ]
            if [[ $current_indent -ne 0 ]]; then
-        #   echo "CURRENTINDENT $current_indent     PREVINDENT: $p_indent"
-        #   echo
-        #   echo "DEEPERINDENT----------------------------"
            parent_id+=("$current_id")                                      #add the current_id to the parent_id stack
            current_id+=1
            parents+=( ["$current_id"]=${parent_id[-1]} )
@@ -124,7 +121,7 @@ outfile(){
 
 
 r=-1
-while getopts ":hsf" opt; do                                 #option to runs code to insert sql or write to a file
+while getopts ":hsf" opt; do                                 #option to run code to insert sql or write to a file
   case ${opt} in
     s ) r=1
       ;;
