@@ -1,18 +1,18 @@
 ##postgres set-up on archlinux:
-sudo -iu postgres
-initdb -D var/lib/postgres/data
-exit
-sudo systemctl start postgresql.service
-sudo -iu postgres
-createdb newdb
+##sudo -iu postgres
+##initdb -D var/lib/postgres/data
+##exit
+##sudo systemctl start postgresql.service
+##sudo -iu postgres
+##createdb newdb
 
 ##create the database:
 
- CREATE TABLE dirs (
-     dir_id BIGINT NOT NULL,
-     parent_id BIGINT,
-     isfolder BOOLEAN NOT NULL,
-     dir_name VARCHAR(64) NOT NULL,
-     FOREIGN KEY (parent_id) REFERENCES dirs (dir_id),
-     PRIMARY KEY(dir_id)
- );
+## CREATE TABLE dirs (
+##     dir_id BIGINT NOT NULL,
+##     parent_id BIGINT,
+##     isfolder BOOLEAN NOT NULL,
+##     dir_name VARCHAR(64) NOT NULL,
+##     FOREIGN KEY (parent_id) REFERENCES dirs (dir_id),
+##     PRIMARY KEY(dir_id)
+## );
